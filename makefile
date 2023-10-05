@@ -1,8 +1,8 @@
 .PHONY: clean build
-clean:
-	rm -rf pkg src masscode_* masscode-* masscode.png
 build:
 	rm -rf pkg src && makepkg -sf && makepkg --printsrcinfo > .SRCINFO
+clean:
+	rm -rf pkg src masscode_* masscode-* masscode.png
 sha:
 	makepkg -g
 install:
