@@ -4,7 +4,7 @@ build:
 clean:
 	rm -rf pkg src masscode_* masscode-* masscode.png
 sha:
-	makepkg -g
+	proxychains -q makepkg -g
 install:
 	rm -rf pkg src && makepkg -sfi && makepkg --printsrcinfo > .SRCINFO
 cp:
